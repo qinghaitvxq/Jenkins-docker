@@ -1,0 +1,12 @@
+pipeline {
+    agent {
+        label 'demo-docker-test'
+    }
+    stages {
+        stage("Test"){
+            steps {
+                sh 'docker --version'
+            }
+        }
+    }
+}
